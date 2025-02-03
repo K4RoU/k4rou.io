@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Phoenix - Details</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+  <!-- AOS Animation Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <style>
+    .team-logo {
+      width: 150px;
+      height: auto;
+      border-radius: 50%;
+    }
+
+    .player-profile {
+      margin-top: 20px;
+    }
+
+    .achievements {
+      margin-top: 30px;
+    }
+
+    /* Popup modal animation */
+    .modal-content {
+      animation: popUp 0.3s ease-in-out;
+    }
+
+    @keyframes popUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Team Info -->
+  <div class="container my-5">
+    <h1 class="text-center" data-aos="fade-down">Team Phoenix</h1>
+
+    <div class="text-center">
+      <img src="assets/team-phoenix-logo.png" alt="Team Phoenix Logo" class="team-logo" data-aos="fade-up">
+    </div>
+
+    <section class="player-profile">
+      <h3>Player Profiles</h3>
+      <div class="row">
+        <div class="col-md-4" data-aos="fade-up">
+          <div class="card">
+            <img src="assets/player1.png" alt="Player 1" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">EANIO</h5>
+              <p class="card-text">Role: Assassin | Achievements: MVP of the tournament</p>
+            </div>
+          </div>
+        </div>
+        <!-- Repeat similar blocks for more players -->
+      </div>
+    </section>
+
+    <section class="achievements">
+      <h3>Achievements</h3>
+      <ul class="list-group">
+        <li class="list-group-item">Winner of The First Ascent - 2025</li>
+        <li class="list-group-item">Top 5 in Global Championships 2025</li>
+        <!-- Add more achievements -->
+      </ul>
+    </section>
+
+    <!-- Button to trigger modal for more details -->
+    <button class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#achievementModal">View Full Achievements</button>
+
+    <!-- Modal for detailed achievements -->
+    <div class="modal fade" id="achievementModal" tabindex="-1" aria-labelledby="achievementModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="achievementModalLabel">Team Phoenix Achievements</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Here are more in-depth achievements...</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap & AOS Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init(); // Initialize AOS Library
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+/* Center Align Logo and Content */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* Prevent Logo Misalignment */
+.logo {
+  display: block;
+  max-width: 100px;
+  width: auto; /* Maintain Aspect Ratio */
+  height: auto; /* Responsive Height */
+  margin-bottom: 20px;
+}
+
+/* Ensure Responsive Container */
+.container {
+  max-width: 1200px; /* Limit container width */
+  margin: 0 auto; /* Center horizontally */
+  padding: 20px;
+}
+
+/* Prevent Zoom Misalignment */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  
+  .explore-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+}
+

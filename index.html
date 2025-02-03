@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>The Final Ascent</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+  <!-- AOS Animation Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Custom Styles */
+    .tag-card {
+      border-radius: 8px;
+      background: #f9f9f9;
+      transition: transform 0.3s ease;
+    }
+
+    .tag-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .upcoming-section ul {
+      padding-left: 0;
+    }
+
+    .squad-support {
+      background-color: #e9f7ff;
+      padding: 30px;
+      margin-top: 50px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .squad-support h3 {
+      color: #007bff;
+      font-weight: bold;
+    }
+
+    .squad-highlight {
+      margin-top: 20px;
+    }
+
+    /* Custom Flexbox for Responsive Grid */
+    @media (min-width: 768px) {
+      .tag-card {
+        height: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header text-center py-5">
+    <img src="assets/logo.png" alt="The Final Ascent Logo" class="logo">
+    <h1 class="display-4 fw-bold" data-aos="fade-down">The Final Ascent</h1>
+    <p class="lead" data-aos="fade-up">Experience the Thrill of Competitive Gaming</p>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container my-5">
+    <!-- Register Section -->
+    <section class="register-section text-center" data-aos="zoom-in">
+      <h2>Register Your Team</h2>
+      <p class="mb-4">Sign in with your Google Account to join the tournament</p>
+      <button id="googleLogin" class="btn btn-primary btn-lg">Sign in with Google</button>
+    </section>
+
+    <!-- Tags Section -->
+    <section class="tags-section mt-5">
+      <h3 class="mb-4" data-aos="fade-right">Explore the Tournament</h3>
+      <div class="row g-4">
+        <div class="col-12 col-md-4" data-aos="fade-up">
+          <div class="card p-3 shadow-sm tag-card">
+            <h5 class="tag-title">ပြိုင်ပွဲအကြောင်းအရာ</h5>
+            <p class="tag-description">The most thrilling event of the year awaits. Learn about the rules and format here!</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card p-3 shadow-sm tag-card">
+            <h5 class="tag-title">Champions Team History</h5>
+            <p class="tag-description">Check out the records of the greatest teams from past seasons.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card p-3 shadow-sm tag-card">
+            <h5 class="tag-title">အကောင်းဆုံး Player</h5>
+            <p class="tag-description">Discover the most skilled players of the tournament.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upcoming Tournaments -->
+    <section class="upcoming-section mt-5">
+      <h3 class="mb-4" data-aos="fade-left">Upcoming Tournaments</h3>
+      <ul class="list-group" data-aos="fade-up">
+        <li class="list-group-item">The First Ascent - March 2025</li>
+        <li class="list-group-item">The Final Ascent - April 2025</li>
+      </ul>
+    </section>
+<!-- Squad Support Program -->
+<section class="squad-support mt-5" data-aos="fade-up">
+  <h3>Squad Support Program of the Month</h3>
+  <div class="squad-highlight">
+    <!-- Link to the new page with detailed squad info -->
+    <a href="team-detail-page.html" class="squad-link">
+      <h4>Congratulations to <span id="team-name">Team Phoenix</span>!</h4>
+      <p><strong>Reward:</strong> 500 Diamonds & Exclusive Coaching Session</p>
+      <p>
+        <strong>Why They Were Chosen:</strong> Team Phoenix showcased exceptional teamwork
+        and strategy, making them the top-performing squad of the month.
+      </p>
+    </a>
+  </div>
+</section>
+
+<!-- Add styles to highlight the clickable box -->
+<style>
+  .squad-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .squad-link:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+  }
+</style>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer text-center py-3">
+    <p>&copy; 2025 The Final Ascent. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init(); // Initialize AOS Library
+  </script>
+</body>
+</html>
