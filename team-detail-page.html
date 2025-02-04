@@ -3,13 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Team Phoenix - Details</title>
+  <title>Innocent Crews - Team Details</title>
+  
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+  
   <!-- AOS Animation Library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
   <style>
     /* Dark Theme */
     body {
@@ -20,32 +24,49 @@
 
     .container {
       background: #1f1f1f;
-      padding: 30px;
+      padding: 40px;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+      max-width: 900px;
+    }
+
+    /* Team Logo */
+    .team-logo-container {
+      text-align: center;
+      margin-bottom: 30px;
     }
 
     .team-logo {
-      width: 150px;
-      height: auto;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
-      border: 3px solid #ffcc00;
+      border: 5px solid #ffcc00;
+      object-fit: cover;
     }
 
+    /* Player Cards */
     .player-profile h3, .achievements h3 {
       color: #ffcc00;
     }
 
-    .card {
+    .player-card {
       background: #292929;
       color: #e0e0e0;
       border: none;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 10px;
+      overflow: hidden;
     }
 
-    .card:hover {
+    .player-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    }
+
+    .player-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
     }
 
     .list-group-item {
@@ -54,13 +75,17 @@
       border-color: #444;
     }
 
+    /* Buttons */
     .btn-primary {
-      background-color: #007bff;
-      border-color: #0056b3;
+      background-color: #ffcc00;
+      border-color: #d4a000;
+      color: #121212;
+      font-weight: bold;
     }
 
     .btn-primary:hover {
-      background-color: #0056b3;
+      background-color: #d4a000;
+      color: #121212;
     }
 
     /* Popup modal animation */
@@ -97,51 +122,73 @@
   <div class="container my-5">
     <h1 class="text-center text-warning" data-aos="fade-down">INNOCENT CREWS</h1>
 
-    <div class="text-center">
-      <img src="teamlogo.png" alt="Innocent Crews Logo" class="team-logo" data-aos="fade-up">
+    <div class="team-logo-container" data-aos="fade-up">
+      <img src="assets/teamlogo.png" alt="Innocent Crews Logo" class="team-logo">
     </div>
 
-    <section class="player-profile mt-4">
-      <h3>Player Profiles</h3>
-      <div class="row">
-        <div class="col-md-4" data-aos="fade-up">
-          <div class="card p-3">
-            <img src="player1.png" alt="Player 1" class="card-img-top">
-            <div class="card-body">
+    <!-- Player Profiles -->
+    <section class="player-profile">
+      <h3 class="text-center">Player Profiles</h3>
+      <div class="row g-4 mt-3">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up">
+          <div class="card player-card">
+            <img src="assets/player1.png" alt="Player 1">
+            <div class="card-body text-center">
               <h5 class="card-title text-warning">EANIO</h5>
-              <p class="card-text">Role: COACH | Achievements: THE BEST COACH OF THE TOURNAMENT </p>
+              <p class="card-text">Role: COACH <br> 🏆 Best Coach of the Tournament</p>
             </div>
           </div>
         </div>
-        <!-- Repeat similar blocks for more players -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up">
+          <div class="card player-card">
+            <img src="assets/player2.png" alt="Player 2">
+            <div class="card-body text-center">
+              <h5 class="card-title text-warning">ZEON</h5>
+              <p class="card-text">Role: Captain <br> 🚀 Strategic Leader</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up">
+          <div class="card player-card">
+            <img src="assets/player3.png" alt="Player 3">
+            <div class="card-body text-center">
+              <h5 class="card-title text-warning">RAVEN</h5>
+              <p class="card-text">Role: Sniper <br> 🎯 Headshot Specialist</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="achievements mt-4">
-      <h3>Achievements</h3>
-      <ul class="list-group">
+    <!-- Achievements -->
+    <section class="achievements mt-5">
+      <h3 class="text-center">Achievements</h3>
+      <ul class="list-group mt-3">
         <li class="list-group-item">🏆 Winner of The First Ascent - 2025</li>
         <li class="list-group-item">🌍 Top 5 in Global Championships 2025</li>
-        <!-- Add more achievements -->
+        <li class="list-group-item">🔥 MVP of the Year - EANIO</li>
       </ul>
     </section>
 
     <!-- Button to trigger modal for more details -->
-    <button class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#achievementModal">View Full Achievements</button>
+    <div class="text-center">
+      <button class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#achievementModal">View Full Achievements</button>
+    </div>
 
     <!-- Modal for detailed achievements -->
     <div class="modal fade" id="achievementModal" tabindex="-1" aria-labelledby="achievementModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title text-warning" id="achievementModalLabel">INNOCENT CREWS Achievements</h5>
+            <h5 class="modal-title text-warning" id="achievementModalLabel">Team Achievements</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p>🔥 Winner of The First Ascent - 2025</p>
+            <p>🏆 Winner of The First Ascent - 2025</p>
             <p>🌍 Top 5 in Global Championships 2025</p>
-            <p>💎 Most Valuable Player (EANIO) - 2025</p>
+            <p>🔥 MVP of the Year - EANIO</p>
             <p>🚀 Best Strategy Award - 2024</p>
+            <p>⚡ Fastest Match Victory Record</p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
